@@ -9,9 +9,7 @@ import java.util.Scanner;
 import ro.ase.cts.classes.Angajat;
 import ro.ase.cts.classes.Aplicant;
 
-public class AngajatReader extends AplicantReader {
-
-	
+public class AngajatReader extends AplicantReader{
 	public AngajatReader(String fileName) {
 		super(fileName);
 		// TODO Auto-generated constructor stub
@@ -23,18 +21,13 @@ public class AngajatReader extends AplicantReader {
 		List<Aplicant> angajati = new ArrayList<Aplicant>();
 
 		while (input2.hasNext()) {
-			String nume = input2.next();
-			String prenume = input2.next();
-			int varsta = input2.nextInt();
-			int punctaj = input2.nextInt();
-			int nr = input2.nextInt();
-			String[] vect = new String[5];
-			for (int i = 0; i < nr; i++)
-				vect[i] = input2.next();
+			Angajat angajat = new Angajat();
+			super.citesteAplicant(input2, angajat);
 			int salariu = input2.nextInt();
 			String ocupatie = input2.next();
-			Angajat a = new Angajat(nume, prenume, varsta, punctaj, nr, vect, salariu, ocupatie);
-			angajati.add(a);
+			angajat.setSalariu(salariu);
+			angajat.setOcupatie(ocupatie);
+			angajati.add(angajat);
 		}
 		input2.close();
 		return angajati;
