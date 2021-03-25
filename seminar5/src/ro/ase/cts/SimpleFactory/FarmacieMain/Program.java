@@ -1,9 +1,9 @@
-package ro.ase.cts.main;
+package ro.ase.cts.SimpleFactory.FarmacieMain;
 
-import ro.ase.cts.Categorie;
-import ro.ase.cts.CategorieFactory;
-import ro.ase.cts.CategoriiMedicamente;
-import ro.ase.cts.Durere;
+import ro.ase.cts.SimpleFactory.Categorie;
+import ro.ase.cts.SimpleFactory.CategorieFactory;
+import ro.ase.cts.SimpleFactory.CategoriiMedicamente;
+import ro.ase.cts.SimpleFactory.Durere;
 
 public class Program {
 
