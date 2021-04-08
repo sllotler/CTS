@@ -1,5 +1,9 @@
 package ro.ase.cts.adapter.program;
 
+import decorator.AbstractDecorator;
+import decorator.Card;
+import decorator.ConcretDecorator;
+import decorator.ICard;
 import ro.ase.cts.adapter.classes.AdapterCreditClase;
 import ro.ase.cts.adapter.classes.AdapterCreditObj;
 import ro.ase.cts.adapter.classes.InterfataCredit;
@@ -21,6 +25,12 @@ public class Program {
 		AdapterCreditClase adapterCredit = new AdapterCreditClase();
 		oferaInfoCredit(adapterCredit,"Gigel",322.43f);
 		
+		ICard card = new Card("Maria");
+		card.platesteFizic();
+		card.platesteOnline();
+		
+		AbstractDecorator decoratorContactless = new ConcretDecorator(card);
+		decoratorContactless.platesteContactless();
 	}
 
 }
