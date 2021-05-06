@@ -2,8 +2,8 @@ package ro.ase.cts.command.classes;
 
 public class Retragere extends Command{
 
-	public Retragere(ContBancar cont,float suma) {
-		super(cont,suma);
+	public Retragere(ContBancar cont, float suma) {
+		super(cont, suma);
 	}
 
 	@Override
